@@ -14,10 +14,7 @@ if (fs.existsSync(SESSION_FILE_PATH)) {
   });
 }
 
-const client = new Client({
-  puppeteer: { headless: true },
-  session: sessionCfg,
-});
+const client = new Client({});
 client.initialize();
 
 client.on('qr', (qr) => {
